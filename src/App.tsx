@@ -63,8 +63,7 @@ function App() {
           </button>
 
         </div>
-        <h1 className="text-white text-center font-mono text-sm my-[15px]">Fibonacci result: {resultFibonacci}</h1>
-
+        <h1 className="text-white text-center font-mono text-sm my-[15px]">Fibonacci result (n=45): {resultFibonacci}</h1>
       </div>
       <Form submitForm={submitForm} total={total} />
     </div>
