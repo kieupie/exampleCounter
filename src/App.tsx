@@ -31,7 +31,6 @@ function App() {
   }, []);
   console.timeEnd('end time fibonacci')
 
-
   return (
     <div className='grid grid-cols-2 gap-2 items-center justify-center'>
       <div className="relative bg-blue-900 p-24 rounded-lg shadow-lg">

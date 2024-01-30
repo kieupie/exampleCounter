@@ -20,4 +20,5 @@ cache ket qua tra ve cua mot funtion sau khi function do duoc thuc thi
 cache dinh nghia cua mot function va khong thuc thi function do
 
 
-Khi su dung useCallback can ket hop voi React.memo (higher order component, de boc cac component => de component con khong bi re-render component khi nhan vao props giong nhau)
+Khi su dung useCallback can ket hop voi React.memo (higher order component, de boc cac component con=> de component con khong bi re-render component khi nhan vao props giong nhau)
+VD: Boc React.memo o Form de ngan re-render form neu nhu tham so dau vao giong nhau, Form luon nhan tham so la total va ta dang setTotal la 10 => khi cap nhat state tu component App cha khong lam cho component con Form bi re-render

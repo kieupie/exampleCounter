@@ -6,7 +6,7 @@ interface FormProps {
     total: number;
 }
 
-export default function Form({ submitForm, total }: FormProps) {
+const Form: React.FC<FormProps> = React.memo(({ submitForm, total }: FormProps) => {
     console.log(`Form is rendered`);
     return (
         <div className="inline-flex items-center justify-center w-80 mx-auto bg-blue-900 p-8 rounded-lg shadow-lg text-white">
@@ -18,7 +18,8 @@ export default function Form({ submitForm, total }: FormProps) {
                 </Button>
                 <h1 className="font-mono text-sm my-2">Total: {total}</h1>
             </div>
-
         </div>
     );
-}
+});
+
+export default Form;
