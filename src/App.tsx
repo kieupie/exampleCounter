@@ -31,6 +31,10 @@ function App() {
   }, []);
   console.timeEnd('end time fibonacci')
 
+  const submitForm = () => {
+    alert('Form is submitted')
+  }
+
   return (
     <div className='grid grid-cols-2 gap-2 items-center justify-center'>
       <div className="relative bg-blue-900 p-24 rounded-lg shadow-lg">
@@ -54,7 +58,7 @@ function App() {
         <h1 className="text-white text-center font-mono text-sm my-[15px]">Fibonacci result: {resultFibonacci}</h1>
 
       </div>
-      <Form total={total} />
+      <Form submitForm={submitForm} total={total} />
     </div>
   );
 }
