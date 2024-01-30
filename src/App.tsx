@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { PlusOutlined, MinusOutlined, ReloadOutlined } from '@ant-design/icons';
 import Form from './Form';
 import './App.css';
@@ -31,9 +31,9 @@ function App() {
   }, []);
   console.timeEnd('end time fibonacci')
 
-  const submitForm = () => {
+  const submitForm = useCallback(() => {
     alert('Form is submitted')
-  }
+  }, []);
 
   return (
     <div className='grid grid-cols-2 gap-2 items-center justify-center'>
