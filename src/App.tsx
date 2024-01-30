@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [total, setTotal] = useState(10)
+  // const [total, setTotal] = useState(10)
 
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count - 1);
@@ -65,7 +65,7 @@ function App() {
         </div>
         <h1 className="text-white text-center font-mono text-sm my-[15px]">Fibonacci result (n=45): {resultFibonacci}</h1>
       </div>
-      <Form submitForm={submitForm} total={total} />
+      <Form submitForm={submitForm} total={10} />
     </div>
   );
 }
