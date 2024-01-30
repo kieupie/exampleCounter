@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { PlusOutlined, MinusOutlined, ReloadOutlined } from '@ant-design/icons';
 import './App.css';
 
@@ -8,6 +8,27 @@ function App() {
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count - 1);
   const reset = () => setCount(0);
+
+  //expensive function - Fibonacci
+  function fibonacci(n: number): number {
+    if (n < 2) {
+      return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+
+  //No use memoization
+  // console.time('start fibonacci')
+  // const resultFibonacci = fibonacci(45);
+  // console.timeEnd('end time fibonacci')
+
+  //Use useMemo
+  console.time('start time fibonacci')
+  const resultFibonacci = useMemo(() => {
+    return fibonacci(45);
+  }, []);
+  console.timeEnd('end time fibonacci')
+
 
   return (
     <div className="relative w-80vmin bg-blue-900 p-24 rounded-lg shadow-lg">
@@ -26,6 +47,7 @@ function App() {
         </button>
 
       </div>
+      <h1 className="text-white text-center font-mono text-sm my-[15px]">Fibonacci result: {resultFibonacci}</h1>
     </div>
 
   );
