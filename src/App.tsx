@@ -31,9 +31,17 @@ function App() {
   }, []);
   console.timeEnd('end time fibonacci')
 
+  //Use useCallbacks
   const submitForm = useCallback(() => {
     alert('Form is submitted')
   }, []);
+
+  //Use useMemo ~ useCallback
+  // const submitForm = useMemo(() => {
+  //   return () => {
+  //     alert('Form is submitted')
+  //   }
+  // }, []);
 
   return (
     <div className='grid grid-cols-2 gap-2 items-center justify-center'>

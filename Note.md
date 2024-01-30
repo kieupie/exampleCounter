@@ -34,3 +34,14 @@ Vi doi voi nhung kieu du lieu nhu: function, array, object thi khi thuc hien "so
     => Nen component con re-render khong can thiet
 ==> Can su dung them useCallback de giai quyet truong hop tren, neu co function truyen vao qua props
 
+
+# Co the su dung useMemo thay the cho useCallback hay khong?
+Co the, su dung useMemo o function (dinh nghi de lam props) trong function do truyen vao mot function (thay vi return ve mot ket qua xac dinh nhu truoc do voi fibonacci(45))
+
+```tsx
+  const submitForm = useMemo(() => {
+   return () => {
+    alert('Form is submitted')
+   }
+  }, []);
+```
